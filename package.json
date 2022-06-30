@@ -1,11 +1,12 @@
 {
   "name": "mirai-sdk-ts",
   "version": "1.0.0",
-  "description": "",
+  "description": "mirai sdk for typescript",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "prepare": "husky install"
+    "build": "rimraf dist && tsc && cp ./package.json ./dist && cp ./README.md ./dist",
+    "prepare": "husky install",
+    "cm": "git-cz"
   },
   "author": "",
   "license": "ISC",
@@ -13,11 +14,14 @@
     "axios": "^0.27.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "git-cz": "^4.9.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
