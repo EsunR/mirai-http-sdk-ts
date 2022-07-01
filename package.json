@@ -1,7 +1,7 @@
 {
-  "name": "mirai-sdk-ts",
+  "name": "mirai-http-sdk-ts",
   "version": "1.0.0",
-  "description": "mirai sdk for typescript",
+  "description": "mirai-http sdk for typescript",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && tsc && cp ./package.json ./dist && cp ./README.md ./dist",
