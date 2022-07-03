@@ -1,4 +1,7 @@
-import { GroupPermission } from "."
+/**
+ * @file 事件类型
+ */
+import { GroupPermission } from "./common"
 
 export interface IGroupRecallEvent {
   type: "GroupRecallEvent"

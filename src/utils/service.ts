@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios"
 import { isVerifyApi } from "."
 import Mirai from ".."
-import { IMariaApi, PickMariaReq, PickMariaRes } from "../api/interface"
+import { IMariaApi, PickMariaReq, PickMariaRes } from "../api"
 import {
   IMiraiAxiosConfig,
   IMiraiHttpResponse,

@@ -3,7 +3,7 @@ import {
   GET_GROUP_LIST_API,
   GET_MEMBER_LIST_API,
 } from "./api/info"
-import { PickMariaReq } from "./api/interface"
+import { PickMariaReq } from "./api"
 import {
   POST_SEND_FRIEND_MESSAGE_API,
   POST_SEND_GROUP_MESSAGE_API,
@@ -12,7 +12,7 @@ import { POST_BIND_API, POST_VERIFY_API } from "./api/verify"
 import { IMariaConfig } from "./types"
 import { createService } from "./utils/service"
 
-export default class Mirai {
+export class Mirai {
   readonly config: IMariaConfig
   public cachedSessionKey: string = ""
   readonly service: ReturnType<typeof createService>
@@ -78,3 +78,6 @@ export default class Mirai {
     return this.service.post(POST_SEND_GROUP_MESSAGE_API, data)
   }
 }
+
+export default Mirai
+export * from "./types"
