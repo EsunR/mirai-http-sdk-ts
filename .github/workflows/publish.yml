@@ -13,14 +13,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup node
+      - name: Setup pnpm env
+        uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.16
+
+      - name: Setup node env
         uses: actions/setup-node@v3
         with:
           node-version: 14
           cache: 'pnpm'
 
       - name: Install node_modules
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build module
         run: pnpm build
