@@ -6,10 +6,26 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "prepare": "husky install",
-    "cz": "cz",
+    "cm": "cz",
     "release": "semantic-release --branches master"
   },
-  "author": "",
+  "author": {
+    "name": "EsunR",
+    "email": "esunr641@qq.com",
+    "url": "https://esunr.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EsunR/mirai-sdk-ts.git"
+  },
+  "keywords": [
+    "mirai",
+    "http",
+    "sdk",
+    "typescript",
+    "node",
+    "js"
+  ],
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2"
@@ -39,9 +55,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EsunR/mirai-sdk-ts.git"
   }
 }
