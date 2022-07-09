@@ -3,13 +3,30 @@
   "version": "0.0.0-development",
   "description": "mirai-http sdk for typescript",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc",
     "prepare": "husky install",
     "cz": "cz",
     "release": "semantic-release --branches master"
   },
-  "author": "",
+  "author": {
+    "name": "EsunR",
+    "email": "esunr641@qq.com",
+    "url": "https://esunr.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EsunR/mirai-sdk-ts.git"
+  },
+  "keywords": [
+    "mirai",
+    "http",
+    "sdk",
+    "typescript",
+    "node",
+    "js"
+  ],
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2"
@@ -39,9 +56,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EsunR/mirai-sdk-ts.git"
   }
 }

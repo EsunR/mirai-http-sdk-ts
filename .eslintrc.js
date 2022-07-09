@@ -5,7 +5,7 @@ module.exports = {
   plugins: ["prettier", "@typescript-eslint"],
   parserOptions: {
     sourceType: "module",
-    ecmaVersion: 2015,
+    ecmaVersion: 2018,
   },
   env: {
     browser: true,
