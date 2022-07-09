@@ -3,10 +3,11 @@
   "version": "0.0.0-development",
   "description": "mirai-http sdk for typescript",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc",
     "prepare": "husky install",
-    "cm": "cz",
+    "cz": "cz",
     "release": "semantic-release --branches master"
   },
   "author": {
