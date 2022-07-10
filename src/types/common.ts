@@ -1,5 +1,5 @@
 /**
- * 通用类型
+ * @file 通用类型
  */
 import { AxiosRequestConfig } from "axios"
 import { IMariaApi, PickMariaReq } from "../api"
@@ -8,6 +8,10 @@ export interface IMariaConfig {
   host: string
   verifyKey: string
   botQQ: string
+  logger?: {
+    filePath: string
+    level: string
+  }
 }
 
 export enum MIRAI_HTTP_CODE_ENUM {
