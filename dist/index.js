@@ -161,3 +161,4 @@ class Mirai {
 exports.Mirai = Mirai;
 exports.default = Mirai;
 __exportStar(require("./types"), exports);
+__exportStar(require("./utils"), exports);

@@ -142,3 +142,4 @@ export class Mirai {
 
 export default Mirai
 export * from "./types"
+export * from "./utils"

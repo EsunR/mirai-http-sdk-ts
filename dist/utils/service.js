@@ -29,7 +29,7 @@ function createService(miraiInstance) {
             // normal api
             if (!miraiInstance.cachedSessionKey) {
                 const newSession = yield miraiInstance.setNewSession();
-                // miraiLogger.info(`set new session ${newSession}`)
+                miraiInstance.log.info(`set new session ${newSession}`);
             }
             if (config.method === "get") {
                 config.params = Object.assign((_a = config === null || config === void 0 ? void 0 : config.params) !== null && _a !== void 0 ? _a : {}, {
@@ -49,16 +49,14 @@ function createService(miraiInstance) {
         const resData = response.data;
         // sessionKey 失效重新激活并重新发送请求
         if (resData.code === types_1.MIRAI_HTTP_CODE_ENUM.noSession && !config.isReload) {
-            // miraiLogger.info(
-            //   `session ${miraiInstance.cachedSessionKey} is expired, reactive session ... ...`
-            // )
+            miraiInstance.log.info(`session ${miraiInstance.cachedSessionKey} is expired, reactive session ... ...`);
             const newSession = yield miraiInstance.setNewSession();
-            // miraiLogger.info(`set new session ${newSession}`)
+            miraiInstance.log.info(`set new session ${newSession}`);
             return yield service(Object.assign(Object.assign({}, config), { isReload: true, reloadCount: typeof config.reloadCount === "number" ? config.reloadCount + 1 : 1 }));
         }
         return response;
     }), (error) => {
-        // miraiLogger.error(error)
+        miraiInstance.log.error(error);
     });
     const miraiService = {
         get(url, config) {
