@@ -14,8 +14,16 @@ const { Mirai } = require("mirai-http-sdk-ts");
 async function main() {
   const mirai = new Mirai({
     botQQ: "123456789",
-    host: "http://localhost:8085", // mirai-http 的请求地址
+    // mirai-http 的请求地址
+    host: "http://localhost:8085",
     verifyKey: "enter_your_mirai_http_verify_key",
+    // 配置 logger（可选）
+    logger: {
+      // 存放日志的地址
+      filePath: path.resolve(__dirname, "./log/mira-http-ts-sdk.log"),
+      // 记录 log 级别，参考 log4js
+      level: "debug",
+    },
   });
 
   await mirai.sendFriendMessage({
@@ -28,7 +36,8 @@ async function main() {
     ],
   });
 
-  console.log("send success");
+  // 配置 logger 后可使用
+  mirai.log.info("send success");
 }
 
 main();
