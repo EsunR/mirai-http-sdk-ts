@@ -52,8 +52,8 @@
     "typescript": "^4.7.4"
   },
   "lint-staged": {
-    "*.{js,vue,ts}": "eslint --cache --fix",
-    "*.--write": "prettier --write"
+    "src/**/*.{js,vue,ts}": "eslint --cache --fix",
+    "src/**/*": "prettier --write"
   },
   "config": {
     "commitizen": {
