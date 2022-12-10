@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MIRAI_HTTP_CODE_ENUM = void 0;
-var MIRAI_HTTP_CODE_ENUM;
+export var MIRAI_HTTP_CODE_ENUM;
 (function (MIRAI_HTTP_CODE_ENUM) {
     MIRAI_HTTP_CODE_ENUM[MIRAI_HTTP_CODE_ENUM["success"] = 0] = "success";
     MIRAI_HTTP_CODE_ENUM[MIRAI_HTTP_CODE_ENUM["verifyError"] = 1] = "verifyError";
@@ -14,4 +11,4 @@ var MIRAI_HTTP_CODE_ENUM;
     MIRAI_HTTP_CODE_ENUM[MIRAI_HTTP_CODE_ENUM["botBaned"] = 10] = "botBaned";
     MIRAI_HTTP_CODE_ENUM[MIRAI_HTTP_CODE_ENUM["longMsg"] = 30] = "longMsg";
     MIRAI_HTTP_CODE_ENUM[MIRAI_HTTP_CODE_ENUM["badRequest"] = 400] = "badRequest";
-})(MIRAI_HTTP_CODE_ENUM = exports.MIRAI_HTTP_CODE_ENUM || (exports.MIRAI_HTTP_CODE_ENUM = {}));
+})(MIRAI_HTTP_CODE_ENUM || (MIRAI_HTTP_CODE_ENUM = {}));
